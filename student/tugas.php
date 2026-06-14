@@ -104,7 +104,7 @@ $now = date('Y-m-d H:i:s');
     <li><a href="jadwal.php" class="nav-link"><i class="fa fa-calendar fa-fw"></i><span>Jadwal Kuliah</span></a></li>
     <li><a href="tugas.php" class="nav-link active"><i class="fa fa-list-check fa-fw"></i><span>To-Do Tugas</span></a></li>
     <li style="position:absolute;bottom:1rem;width:100%">
-      <a href="/logout.php" class="nav-link text-danger"><i class="fa fa-right-from-bracket fa-fw"></i><span>Keluar</span></a>
+      <a href="/sipakar/sipakar/logout.php" class="nav-link text-danger"><i class="fa fa-right-from-bracket fa-fw"></i><span>Keluar</span></a>
     </li>
   </ul>
 </nav>
@@ -250,7 +250,7 @@ document.querySelectorAll('.task-check').forEach(cb => {
     const item   = document.getElementById('task-' + id);
 
     try {
-      const res  = await fetch('/api/update_task_status.php', {
+      const res  = await fetch('/sipakar/sipakar/api/update_task_status.php', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ id, status })

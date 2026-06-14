@@ -62,12 +62,12 @@ CREATE TABLE prodi (
 
 -- Admin default (password: admin123)
 INSERT INTO users (nama, email, password, role) VALUES
-('Administrator', 'admin@sipakar.ac.id', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'admin');
+('Administrator', 'admin@sipakar.ac.id', '$2y$10$KXUEUbgUG8Rt2uRRHJPOGuIJ.Z2ScfO4kcqRAS7R2ur8Iw8keAnOG', 'admin');
 
 -- Mahasiswa demo (password: mahasiswa123)
 INSERT INTO users (nama, nim, email, password, role, prodi, fakultas) VALUES
-('Aldza Salwatul Aisy', '240605110228', 'aldza@student.sipakar.ac.id', '$2y$10$TKh8h1.PzL5QgWCEXxX0AeLMn6Hm7GYi2pMV6N3u6P9VqmMkzVAHm', 'student', 'Teknik Informatika', 'Sains dan Teknologi'),
-('Najwarizqa Aryandri', '240605110060', 'najwa@student.sipakar.ac.id', '$2y$10$TKh8h1.PzL5QgWCEXxX0AeLMn6Hm7GYi2pMV6N3u6P9VqmMkzVAHm', 'student', 'Teknik Informatika', 'Sains dan Teknologi');
+('Aldza Salwatul Aisy', '240605110228', 'aldza@student.sipakar.ac.id', '$2y$10$Qea8IFFJOnWHJay4Jm114.AjbAEK30XEvMnoN9iDFyacKF7sW/23W', 'student', 'Teknik Informatika', 'Sains dan Teknologi'),
+('Najwarizqa Aryandri', '240605110060', 'najwa@student.sipakar.ac.id', '$2y$10$Qea8IFFJOnWHJay4Jm114.AjbAEK30XEvMnoN9iDFyacKF7sW/23W', 'student', 'Teknik Informatika', 'Sains dan Teknologi');
 
 -- Master prodi
 INSERT INTO prodi (nama_prodi, fakultas) VALUES

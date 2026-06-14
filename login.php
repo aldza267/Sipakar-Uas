@@ -3,7 +3,7 @@ require_once __DIR__ . '/includes/auth.php';
 
 startSession();
 if (isLoggedIn()) {
-    header('Location: /index.php');
+    header('Location: ' . BASE_PATH . '/index.php');
     exit;
 }
 
@@ -17,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     } else {
         $result = login($email, $password);
         if ($result['success']) {
-            header('Location: /index.php');
+            header('Location: ' . BASE_PATH . '/index.php');
             exit;
         } else {
             $error = $result['message'];

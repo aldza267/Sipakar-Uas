@@ -5,6 +5,9 @@
 
 require_once __DIR__ . '/config.php';
 
+// Base path aplikasi (sesuaikan jika berbeda)
+define('BASE_PATH', '/sipakar/sipakar');
+
 function startSession(): void {
     if (session_status() === PHP_SESSION_NONE) {
         session_start();
@@ -18,7 +21,7 @@ function isLoggedIn(): bool {
 
 function requireLogin(): void {
     if (!isLoggedIn()) {
-        header('Location: /login.php');
+        header('Location: ' . BASE_PATH . '/login.php');
         exit;
     }
 }
@@ -27,7 +30,7 @@ function requireRole(string $role): void {
     requireLogin();
     startSession();
     if ($_SESSION['role'] !== $role) {
-        header('Location: /index.php');
+        header('Location: ' . BASE_PATH . '/index.php');
         exit;
     }
 }
@@ -65,6 +68,6 @@ function login(string $email, string $password): array {
 function logout(): void {
     startSession();
     session_destroy();
-    header('Location: /login.php');
+    header('Location: ' . BASE_PATH . '/login.php');
     exit;
 }

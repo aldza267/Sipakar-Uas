@@ -95,7 +95,7 @@ $allUsers = $stmt->fetchAll();
     <li><a href="users.php" class="nav-link active"><i class="fa fa-users fa-fw"></i><span>Manajemen User</span></a></li>
     <li><a href="prodi.php" class="nav-link"><i class="fa fa-university fa-fw"></i><span>Master Prodi</span></a></li>
     <li style="position:absolute;bottom:1rem;width:100%">
-      <a href="/logout.php" class="nav-link text-danger"><i class="fa fa-right-from-bracket fa-fw"></i><span>Keluar</span></a>
+      <a href="/sipakar/sipakar/logout.php" class="nav-link text-danger"><i class="fa fa-right-from-bracket fa-fw"></i><span>Keluar</span></a>
     </li>
   </ul>
 </nav>

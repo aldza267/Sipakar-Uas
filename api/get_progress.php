@@ -11,10 +11,6 @@ $pdo  = getDB();
 $user = currentUser();
 $uid  = $user['id'];
 
-$total   = (int)$pdo->prepare("SELECT COUNT(*) FROM tasks WHERE user_id=?")->execute([$uid]) ? $pdo->query("SELECT COUNT(*) FROM tasks WHERE user_id=$uid")->fetchColumn() : 0;
-$selesai = (int)$pdo->query("SELECT COUNT(*) FROM tasks WHERE user_id=$uid AND status='selesai'")->fetchColumn();
-
-// Safer approach with prepared statements
 $stmt1 = $pdo->prepare("SELECT COUNT(*) FROM tasks WHERE user_id=?");
 $stmt1->execute([$uid]);
 $total = (int)$stmt1->fetchColumn();

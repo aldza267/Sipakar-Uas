@@ -4,8 +4,8 @@ requireLogin();
 
 $user = currentUser();
 if ($user['role'] === 'admin') {
-    header('Location: /admin/dashboard.php');
+    header('Location: ' . BASE_PATH . '/admin/dashboard.php');
 } else {
-    header('Location: /student/dashboard.php');
+    header('Location: ' . BASE_PATH . '/student/dashboard.php');
 }
 exit;
